@@ -1,0 +1,14 @@
+@use '@/styles/abstracts/_index' as *;
+@use '@/styles/base/_media' as *;
+
+.input {
+  border: 1.75px solid rgba(255, 255, 255, .7);
+  height: 48px;
+  width: 100%;
+  color: var(--tertiary-variant);
+  padding-inline: 16px;
+
+  &::placeholder {
+    color: var(--tertiary-variant);
+  }
+}

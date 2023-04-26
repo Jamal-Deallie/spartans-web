@@ -1,0 +1,72 @@
+@use '@/styles/abstracts/_index' as *;
+@use '@/styles/base/_media' as *;
+
+.cta-cont {
+  margin-top: mobile-vw(96px);
+
+  @include desktop {
+    margin-top: desktop-vw(128px);
+  }
+}
+.cta-wrap {
+  border-radius: 25px;
+  padding: mobile-vw(24px) mobile-vw(24px);
+
+  .heading {
+    grid-column: 1/ -1;
+
+    @include desktop {
+      grid-column: 1 / 7;
+    }
+  }
+  h1:nth-of-type(even) {
+    color: var(--secondary-variant);
+  }
+
+  p {
+    margin-top: mobile-vw(12px);
+    max-width: 55ch;
+  }
+
+  @include desktop {
+    max-width: var(--layout-width);
+    padding: desktop-vw(96px) desktop-vw(64px);
+
+    p {
+      margin-top: desktop-vw(16px);
+    }
+  }
+}
+.button {
+  grid-column: 1/ -1;
+
+  @include desktop {
+    grid-column: 9 / -1;
+    align-self: end;
+  }
+}
+
+.btn {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: start;
+  vertical-align: baseline;
+  white-space: nowrap;
+  color: var(--tertiary-variant);
+  height: 48px;
+  width: 100%;
+  border: 1.75px solid var(--tertiary-variant);
+  padding: 12px 20px;
+  display: inline-flex;
+  cursor: pointer;
+  border-radius: 9999px;
+  gap: 24px;
+  svg {
+    margin-left: 5px;
+    stroke: currentColor;
+
+    vertical-align: middle;
+    justify-items: flex-end;
+  }
+}

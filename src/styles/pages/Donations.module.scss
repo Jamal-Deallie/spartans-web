@@ -1,0 +1,47 @@
+@use '@/styles/abstracts/_index' as *;
+@use '@/styles/base/_media' as *;
+.donations {
+  h4 {
+    font-size: mobile-vw(30.04px);
+    @include desktop {
+      font-size: desktop-vw(41.89px);
+    }
+  }
+  h5 {
+    font-size: mobile-vw(30.04px);
+    @include desktop {
+      font-size: desktop-vw(67.77px);
+    }
+  }
+}
+.form {
+  width: 750px;
+}
+
+.buttons {
+  margin-top: 24px;
+  display: inline-flex;
+
+  gap: 24px;
+  button {
+    border: 1px solid var(--tertiary-variant);
+    padding: 20px;
+  }
+}
+
+.fields {
+  display: flex;
+  align-items: flex-end;
+  margin: 24px 0;
+  gap: 16px;
+
+  input {
+    border-bottom: 1px solid var(--tertiary-variant);
+    height: 19px;
+    padding-left: 4px;
+
+    &::placeholder {
+      color: var(--tertiary-variant);
+    }
+  }
+}

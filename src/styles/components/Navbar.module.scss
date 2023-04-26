@@ -1,0 +1,105 @@
+@use '@/styles/abstracts/_index' as *;
+@use '@/styles/base/_media' as *;
+
+.container {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: var(--nav-height);
+  background-color: var(--secondary-variant);
+  @include desktop {
+    height: var(--nav-height);
+  }
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: var(--nav-height);
+  width: 100%;
+  background-color: var(--secondary-variant);
+  max-width: var(--layout-width);
+  margin-inline: auto;
+
+  @include desktop {
+    max-width: var(--layout-width);
+    height: var(--nav-height);
+  }
+}
+
+.logo {
+  position: relative;
+
+  div {
+    aspect-ratio: 249  /  522;
+    height: mobile-vw(55px);
+    width: mobile-vw(26px);
+    position: relative;
+    flex-shrink: 0;
+
+    @include desktop {
+      margin-top: desktop-vw(16px);
+      height: desktop-vw(80px);
+      width: desktop-vw(36px);
+    }
+  }
+  img {
+    aspect-ratio: 249  /  522;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.options {
+  @include desktop {
+    display: flex;
+    gap: desktop-vw(64px);
+  }
+}
+.link-cont {
+  visibility: hidden;
+
+  @include desktop {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    gap: desktop-vw(56px);
+    min-height: desktop-vw(48px);
+  }
+}
+
+.btn-cont {
+  visibility: hidden;
+}
+
+.btn {
+  @include desktop {
+    visibility: visible;
+    font-weight: 400;
+    text-align: center;
+    color: var(--primary-variant);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1.75px solid var(--primary-variant);
+    border-radius: 9999px;
+    font-size: desktop-vw(16px);
+    height: desktop-vw(40px);
+    // width: desktop-vw(120px);
+    padding: desktop-vw(0px) desktop-vw(64px);
+
+    &:hover {
+      border: 1.75px solid var(--primary-variant);
+      color: var(--secondary-variant);
+      background-image: var(--bg-gradient);
+    }
+  }
+}

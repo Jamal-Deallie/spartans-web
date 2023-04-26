@@ -1,0 +1,155 @@
+@use '@/styles/abstracts/_index' as *;
+@use '@/styles/base/_media' as *;
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  margin-top: 16px;
+  border-radius: 20px;
+  overflow: hidden;
+  z-index: 1;
+
+  height: calc(mobile-vw($mobile-height) - var(--nav-height));
+  @include desktop {
+    height: calc(desktop-vw($desktop-height) - var(--nav-height));
+    width: 100%;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    min-height: 100%;
+    width: 100%;
+    background: radial-gradient(transparent 0%, rgba(251, 244, 244, 0.15) 100%);
+    margin-bottom: mobile-vw(-20px);
+    @include desktop {
+      height: 100%;
+    }
+  }
+}
+.cta {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  height: calc(mobile-vw($mobile-height) - var(--nav-height));
+
+  @include desktop {
+    top: 0;
+    height: calc(desktop-vw($desktop-height) - var(--nav-height));
+    width: 100%;
+
+    // margin: desktop-vw(24px) 0;
+  }
+}
+
+.cta-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: mobile-vw(16px);
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  @include mobile {
+    align-items: center;
+  }
+
+  @include desktop {
+    padding: desktop-vw(24px);
+  }
+}
+
+.copy {
+  max-width: mobile-vw(300px);
+  p {
+    margin: mobile-vw(16px) 0;
+    font-size: mobile-vw(16px);
+    line-height: 1.25;
+
+    @include desktop {
+      max-width: 50ch;
+      margin: desktop-vw(24px) 0;
+      font-size: desktop-vw(19px);
+      line-height: 1.33;
+    }
+  }
+}
+
+.btn {
+  /* Font & Text */
+  font-size: mobile-vw(15px);
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1;
+  text-align: center;
+
+  /* Color & Background */
+  color: var(--tertiary-variant);
+
+  /* Box */
+  height: mobile-vw(40px);
+  width: mobile-vw(308.031px);
+  border: solid 1px var(--tertiary-variant);
+  padding: mobile-vw(8px) mobile-vw(16px);
+
+  /* Positioning */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Miscellaneous */
+  cursor: pointer;
+
+  /* Effects */
+  transform: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  outline-offset: 0px;
+  box-sizing: border-box;
+  resize: none;
+  text-shadow: none;
+  text-overflow: clip;
+  word-wrap: normal;
+  box-shadow: none;
+  border-radius: 9999px;
+
+  svg {
+    stroke: currentColor;
+    margin-left: mobile-vw(160px);
+  }
+
+  @include desktop {
+    font-size: desktop-vw(16px);
+    height: desktop-vw(48px);
+    width: desktop-vw(272px);
+    padding: 16px 24px;
+    svg {
+      margin-left: desktop-vw(90px);
+      width: desktop-vw(24px);
+      height: desktop-vw(24px);
+      align-self: center;
+    }
+  }
+}
+
+.img-cont {
+  position: relative;
+  margin-top: mobile-vw(72px);
+  height: calc(mobile-vw($mobile-height) - var(--nav-height));
+
+  @include desktop {
+    margin-top: desktop-vw(120px);
+    height: calc(desktop-vw($desktop-height) - var(--nav-height));
+  }
+
+  img {
+    object-fit: cover;
+    border-radius: 20px;
+  }
+}

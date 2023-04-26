@@ -1,0 +1,76 @@
+@use '@/styles/abstracts/_index' as *;
+@use '@/styles/base/_media' as *;
+
+.btn {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  margin: mobile-vw(8px);
+  height: 50px;
+  width: 50px;
+  border-color: var(--white);
+  color: var(--black);
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+  padding-inline: 0.5rem;
+
+  @include desktop {
+    visibility: hidden;
+  }
+  div {
+    height: 2px;
+    background: var(--tertiary-variant);
+    width: 100%;
+    padding-inline: 0.5rem;
+  }
+}
+
+.menu {
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 9;
+  background: var(--bg-gradient);
+  opacity: 0;
+  ul {
+    padding: 2rem 0 0 2rem;
+    margin-top: mobile-vw(96px);
+    @include desktop {
+      margin-top: desktop-vw(128px);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+    li {
+      a {
+        font-size: mobile-vw(45px);
+        color: var(--white);
+        transition: all 0.3s ease-in-out;
+        font-family: var(--heading-font);
+        font-weight: 900;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        line-height: 86%;
+        @include desktop {
+          font-size: desktop-vw(90px);
+        }
+      }
+      a:hover {
+        color: var(--secondary-variant);
+      }
+    }
+  }
+}

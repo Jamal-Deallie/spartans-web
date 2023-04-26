@@ -1,0 +1,142 @@
+@use '@/styles/abstracts/_index' as *;
+@use '@/styles/base/_media' as *;
+
+.base {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-weight: 400;
+  text-align: center;
+  // transform: translateY(0);
+  // transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  line-height: 1.25;
+  // &:hover {
+  //   box-shadow: rgba(0, 0, 0, 0.15) 0 3px 9px 0;
+  //   transform: translateY(-2px);
+  // }
+}
+
+.sm {
+  padding-inline: mobile-vw(24px);
+  height: mobile-vw(28px);
+  font-size: mobile-vw(11px);
+  @include desktop {
+    padding-inline: desktop-vw(32px);
+    height: desktop-vw(48px);
+    font-size: desktop-vw(16px);
+  }
+}
+
+.md {
+  font-size: mobile-vw(16px);
+  padding-inline: mobile-vw(12px);
+  width: mobile-vw(200px);
+
+  @include desktop {
+    padding-inline: desktop-vw(24px);
+    font-size: desktop-vw(16px);
+    width: desktop-vw(164px);
+  }
+}
+
+.lrg {
+  height: mobile-vw(40px);
+  width: mobile-vw(308.031px);
+  padding: mobile-vw(8px) mobile-vw(16px);
+  font-size: mobile-vw(15px);
+
+  @include desktop {
+    font-size: desktop-vw(19px);
+    height: desktop-vw(48px);
+    width: desktop-vw(272px);
+    padding: desktop-vw(16px) desktop-vw(24px);
+  }
+}
+
+.full {
+  padding: 16px 32px;
+  height: 52px;
+  font-size: 16px;
+}
+
+.font-heading {
+  font-family: var(--heading-font);
+}
+
+.font-body {
+  font-family: var(--heading-font);
+}
+
+@each $name, $font in $fonts {
+  .font-#{$name} {
+    font-family: $font, sans-serif;
+  }
+}
+
+@each $name, $color in $colors {
+  .color-#{$name} {
+    color: $color;
+  }
+  .bg-#{$name} {
+    background-color: $color;
+    border: 1px solid;
+  }
+}
+
+.bg-gradient {
+  background-image: var(--bg-gradient);
+  border: 1px solid;
+}
+
+.btn {
+  /* Font & Text */
+  font-size: mobile-vw(15px);
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1;
+  text-align: center;
+
+  /* Color & Background */
+  color: var(--tertiary-variant);
+
+  /* Box */
+  height: mobile-vw(40px);
+  width: mobile-vw(308.031px);
+  border: solid 1px var(--tertiary-variant);
+  padding: mobile-vw(8px) mobile-vw(16px);
+
+  /* Positioning */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Miscellaneous */
+  cursor: pointer;
+
+  /* Effects */
+  transform: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  outline-offset: 0px;
+  box-sizing: border-box;
+  resize: none;
+  text-shadow: none;
+  text-overflow: clip;
+  word-wrap: normal;
+  box-shadow: none;
+  border-radius: 9999px;
+
+  @include desktop {
+    font-size: desktop-vw(16px);
+    height: desktop-vw(48px);
+    width: desktop-vw(272px);
+    padding: 16px 24px;
+  }
+}

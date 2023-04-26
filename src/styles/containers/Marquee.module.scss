@@ -1,0 +1,29 @@
+@use '@/styles/abstracts/_index' as *;
+@use '@/styles/base/_media' as *;
+
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  height: auto;
+  gap: mobile-vw(10px);
+
+  @include desktop {
+    gap: desktop-vw(100px);
+  }
+}
+
+.img-wrap {
+  position: relative;
+  height: mobile-vh(50px);
+  width: mobile-vw(50px);
+
+  @include desktop {
+    height: desktop-vh(100px);
+    width: desktop-vw(100px);
+  }
+  img {
+    object-fit: contain;
+  }
+}

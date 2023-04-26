@@ -1,0 +1,250 @@
+@use '@/styles/abstracts/_index' as *;
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--heading-font), sans-serif;
+  line-height: 86%;
+
+  text-transform: uppercase;
+  font-weight: 600;
+  font-style: normal;
+}
+
+p {
+  font-family: var(--body-font), sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 125%;
+}
+
+.title {
+  font-size: mobile-vw(39.06px);
+
+  @include desktop {
+    font-size: desktop-vw(119.21px);
+    line-height: 85%;
+  }
+}
+
+.title-md {
+  font-size: mobile-vw(67.77px);
+  letter-spacing: 3px;
+  overflow: visible;
+  @include desktop {
+    font-size: desktop-vw(177.42px);
+    line-height: 0.8;
+  }
+}
+
+.title-sm {
+  font-size: mobile-vw(32px);
+
+  @include desktop {
+    font-size: desktop-vw(96px);
+    line-height: 83%;
+  }
+
+  &.title-vh {
+    font-size: mobile-vh(56px);
+
+    @include desktop {
+      font-size: desktop-vh(96px);
+    }
+  }
+}
+
+.title-xs {
+  font-size: mobile-vw(32px);
+
+  @include desktop {
+    font-size: desktop-vw(72px);
+    line-height: 83%;
+  }
+}
+
+.subtitle {
+  display: block;
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  font-size: mobile-vw(16px);
+  text-transform: capitalize;
+  line-height: 1.25;
+
+  @include desktop {
+    margin-left: desktop-vw(2px);
+    font-size: desktop-vw(19px);
+    line-height: 133%;
+  }
+}
+
+.txt {
+  font-weight: 400;
+  font-size: mobile-vw(16px);
+  line-height: 1.25;
+
+  @include desktop {
+    font-size: desktop-vw(21px);
+    line-height: 1.33;
+  }
+}
+
+.text-sm {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  font-size: mobile-vw(14px);
+
+  @include desktop {
+    font-size: desktop-vw(14px);
+    line-height: 114%;
+  }
+}
+
+.caption {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  font-size: mobile-vw(12px);
+
+  @include desktop {
+    font-size: desktop-vw(12px);
+    line-height: 113%;
+  }
+}
+
+.split-child {
+  display: inline-block;
+  opacity: 1;
+}
+
+.txt-gradient {
+  color: var(--primary-variant);
+  background-image: linear-gradient(
+    to right top,
+    #f94d24,
+    #f6531d,
+    #f35816,
+    #f05d0c,
+    #ed6200
+  );
+  background-image: -webkit-linear-gradient(
+    to right top,
+    #f94d24,
+    #f6531d,
+    #f35816,
+    #f05d0c,
+    #ed6200
+  );
+
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.title-wrap {
+  margin-bottom: mobile-vw(96px);
+  h1:nth-of-type(odd) {
+    color: var(--primary-variant);
+    background-image: linear-gradient(
+      to right top,
+      #f94d24,
+      #f6531d,
+      #f35816,
+      #f05d0c,
+      #ed6200
+    );
+    background-image: -webkit-linear-gradient(
+      to right top,
+      #f94d24,
+      #f6531d,
+      #f35816,
+      #f05d0c,
+      #ed6200
+    );
+
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+  @include desktop {
+    margin-bottom: desktop-vw(96px);
+  }
+}
+
+.z-2 {
+  z-index: 2;
+  opacity: 1;
+  position: relative;
+}
+
+.z-1 {
+  z-index: 1;
+  opacity: 1;
+  position: relative;
+  transform: translate(0);
+}
+
+.outline-txt {
+  font-family: var(--heading-font);
+  font-size: mobile-vw(50.77px);
+  color: var(--tertiary-variant);
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 1;
+
+  @include mobile {
+    letter-spacing: mobile-vw(1px);
+    margin-left: mobile-vw(1px);
+    color: var(--primary-variant);
+    background-image: linear-gradient(
+      to right top,
+      #f94d24,
+      #f6531d,
+      #f35816,
+      #f05d0c,
+      #ed6200
+    );
+    background-image: -webkit-linear-gradient(
+      to right top,
+      #f94d24,
+      #f6531d,
+      #f35816,
+      #f05d0c,
+      #ed6200
+    );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  @include desktop {
+    @include gradient-txt-stroke(var(--secondary-variant));
+    font-size: desktop-vw(130.66px);
+    line-height: 85%;
+    letter-spacing: desktop-vw(3px);
+  }
+}
+
+.split-parent {
+  overflow: hidden;
+}
+
+.txt {
+  font-size: mobile-vw(15px);
+  line-height: 1;
+  font-weight: 500;
+
+  @include desktop {
+    font-size: desktop-vw(16px);
+    line-height: 1.25;
+  }
+}

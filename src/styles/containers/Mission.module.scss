@@ -1,0 +1,42 @@
+@use '@/styles/abstracts/_index' as *;
+@use '@/styles/base/_media' as *;
+
+.mission {
+  position: relative;
+  // overflow: hidden;
+  @include desktop {
+    margin-top: desktop-vw(128px);
+  }
+
+}
+.mission-wrap {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.svg-wrap {
+  position: relative;
+  // aspect-ratio: 700.165 / 513.22;
+  width: mobile-vw(160px);
+  height: mobile-vw(160px);
+  // rotate: 75deg;
+  // left: -35%;
+
+  z-index: 1;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  @include desktop {
+    position: absolute;
+    height: desktop-vw(450px);
+
+    // z-index: -1;
+    // right: -5%;
+    top: 60%;
+    rotate: 75deg;
+  }
+}

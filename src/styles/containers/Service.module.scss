@@ -1,0 +1,13 @@
+@use '@/styles/abstracts/_index' as *;
+@use '@/styles/base/_media' as *;
+
+.img-wrap {
+  position: relative;
+  height: mobile-vh(375px);
+  width: mobile-vw(375px);
+
+  @include desktop {
+    height: desktop-vh(375px);
+    width: desktop-vw(375px);
+  }
+}

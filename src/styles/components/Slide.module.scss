@@ -1,0 +1,55 @@
+@use '@/styles/abstracts/_index' as *;
+@use '@/styles/base/_media' as *;
+
+
+
+.slide {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: inline-block;
+  border-radius: 25px;
+  line-height: 1;
+  width: 100%;
+  height: mobile-vw(260px);
+
+  @include mobile {
+    // margin-left: mobile-vw(8px);
+    // margin-right: mobile-vw(8px);
+  }
+  .wrap {
+    padding: mobile-vw(24px);
+  }
+  @include desktop {
+    width: desktop-vw(430px);
+    height: desktop-vw(325px);
+    margin-bottom: desktop-vw(10px);
+    margin-right: desktop-vw(10px);
+    .wrap {
+      padding: desktop-vw(32px);
+    }
+  }
+
+  h4 {
+    color: var(--secondary-variant);
+    margin: mobile-vw(16px) 0;
+    font-size: mobile-vw(30.04px);
+    @include desktop {
+      margin: desktop-vw(24px) 0;
+      font-size: desktop-vw(67.77px);
+    }
+  }
+
+  h5 {
+    font-size: mobile-vw(30.04px);
+    @include desktop {
+      font-size: desktop-vw(41.89px);
+    }
+  }
+  p {
+    font-size: mobile-vw(16px);
+    @include desktop {
+      font-size: desktop-vw(16px);
+    }
+  }
+}

@@ -1,0 +1,157 @@
+@use '@/styles/abstracts/_index' as *;
+
+.gradient-bg {
+  background-image: linear-gradient(
+    to right top,
+    #f94d24,
+    #f6531d,
+    #f35816,
+    #f05d0c,
+    #ed6200
+  );
+}
+
+.secondary-bg {
+  background-color: var(--secondary-variant);
+}
+
+.main-container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.marquee {
+  position: relative;
+  display: flex;
+  width: 100%;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+}
+.marquee-content {
+  display: flex;
+  flex-shrink: 0;
+  min-width: 100%;
+  justify-content: space-around;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+}
+
+.full-vh {
+  min-height: 100vh;
+}
+
+.pt-xl {
+  padding-top: mobile-vh(160px);
+  @include desktop {
+    padding-top: desktop-vh(160px);
+  }
+}
+
+.mx-xxxl {
+  margin: mobile-vh(80px) 0;
+  @include desktop {
+    margin: desktop-vh(160px) 0;
+  }
+}
+
+.mt-xxxl {
+  margin-top: mobile-vw(72px);
+  @include desktop {
+    margin-top: desktop-vw(160px);
+  }
+}
+
+.mt-xxl {
+  margin-top: mobile-vw(72px);
+  @include desktop {
+    margin-top: desktop-vw(10px);
+  }
+}
+
+.mt-l {
+  margin-top: mobile-vh(60px);
+
+  @include desktop {
+    margin-top: desktop-vh(60px);
+  }
+}
+
+.mt-md {
+  margin-top: mobile-vh(40px);
+
+  @include desktop {
+    margin-top: desktop-vh(40px);
+  }
+}
+
+.mt-s {
+  margin-top: mobile-vh(32px);
+
+  @include desktop {
+    margin-top: desktop-vh(32px);
+  }
+}
+
+.mt-xs {
+  margin-top: mobile-vh(24px);
+
+  @include desktop {
+    margin-top: desktop-vh(24px);
+  }
+}
+
+.mt-xxs {
+  margin-top: mobile-vh(12px);
+
+  @include desktop {
+    margin-top: desktop-vh(12px);
+  }
+}
+
+.px-xl {
+  padding: mobile-vh(160px) 0;
+  @include desktop {
+    padding: desktop-vh(160px) 0;
+  }
+}
+
+.of-h {
+  overflow: hidden;
+}
+
+.grid-1 {
+  grid-column: 1/ -1;
+}
+
+.clr-prim {
+  color: var(--primary-variant);
+}
+
+.mrb-md {
+  margin-bottom: mobile-vh(32px);
+  @include desktop {
+    margin-bottom: desktop-vh(32px);
+  }
+}
+.mrt-md {
+  margin-top: mobile-vh(32px);
+  @include desktop {
+    margin-top: desktop-vh(32px);
+  }
+}
+
+.mrb-xl {
+  margin-bottom: mobile-vw(72px);
+  @include desktop {
+    margin-bottom: desktop-vw(160px);
+  }
+}
+
+.grid-col3 {
+  @include grid-cols(3);
+}
+
+.br {
+  border-radius: 20px;
+}
+

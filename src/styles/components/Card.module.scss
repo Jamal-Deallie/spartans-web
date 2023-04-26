@@ -1,0 +1,97 @@
+@use '@/styles/abstracts/_index' as *;
+@use '@/styles/base/_media' as *;
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  opacity: 1;
+
+  .inner {
+    @include mobile {
+      padding: mobile-vw(20px) 0;
+    }
+
+    img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+
+    h4 {
+      font-size: mobile-vw(30.04px);
+    }
+
+    h5 {
+      font-size: mobile-vw(30.04px);
+    }
+  }
+
+  p {
+    margin: mobile-vw(16px) 0;
+  }
+
+  @include mobile {
+    background-color: var(--secondary-variant);
+    position: relative;
+    z-index: 3;
+  }
+
+  @include desktop {
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    .inner {
+      p {
+        margin: desktop-vw(24px) 0;
+      }
+
+      h5 {
+        font-size: desktop-vw(67.77px);
+      }
+
+      h4 {
+        font-size: desktop-vw(41.89px);
+      }
+    }
+  }
+}
+.football,
+.cheerleading,
+.coaching {
+  position: relative;
+  width: auto;
+  margin: mobile-vw(24px) 0;
+
+  @include desktop {
+    margin: desktop-vw(40px) 0;
+  }
+}
+
+.football {
+  aspect-ratio: 80.06 / 59.19;
+  height: mobile-vw(35px);
+
+  @include desktop {
+    height: desktop-vw(65px);
+  }
+}
+
+.cheerleading {
+  aspect-ratio: 64.21 / 101.75;
+  height: mobile-vw(45px);
+
+  @include desktop {
+    height: desktop-vw(85px);
+  }
+}
+
+.coaching {
+  aspect-ratio: 71.81 / 41.58;
+  height: mobile-vw(30px);
+
+  @include desktop {
+    height: desktop-vw(55px);
+  }
+}

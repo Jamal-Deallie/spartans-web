@@ -1,0 +1,85 @@
+@use './variables' as *;
+
+@mixin outline-font($color) {
+  -webkit-text-stroke-width: thin;
+  -webkit-text-fill-color: transparent;
+  color: $color;
+}
+
+@mixin grid-cols($col) {
+  display: grid;
+  grid-template-columns: repeat($col, minmax(0, 1fr));
+  @content;
+}
+
+@mixin ellipsis($lines) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin gradient-txt-stroke($clr) {
+  background: -webkit-linear-gradient(
+    4deg,
+    #f94d24,
+    #f6531d,
+    #f35816,
+    #f05d0c,
+    #ed6200
+  );
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 5px transparent;
+  color: $clr;
+}
+
+// @each $key, $val in $mobile-space-stops {
+//   .pm-#{$key}{
+//     padding: mobile-vw(#{$val} !important);
+//   }
+//   .ptm-#{$key}{
+//     padding-top: mobile-vw(#{$val} !important);
+//   }
+//   .prm-#{$key}{
+//     padding-right: mobile-vw(#{$val} !important);
+//   }
+//   .pbm-#{$key}{
+//     padding-bottom: mobile-vw(#{$val} !important);
+//   }
+//   .plm-#{$key}{
+//     padding-left: mobile-vw(#{$val} !important);
+//   }
+//   .pxm-#{$key}{
+//     padding-right: mobile-vw(#{$val} !important);
+//     padding-left: mobile-vw(#{$val} !important);
+//   }
+//   .pym-#{$key}{
+//     padding-top: mobile-vw(#{$val} !important);
+//     padding-bottom: mobile-vw(#{$val} !important);
+//   }
+
+//   .mm-#{$key}{
+//     margin: mobile-vw(#{$val} !important);
+//   }
+//   .mtm-#{$key}{
+//     margin-top: mobile-vw(#{$val} !important);
+//   }
+//   .mrm-#{$key}{
+//     margin-right: mobile-vw(#{$val} !important);
+//   }
+//   .mbm-#{$key}{
+//     margin-bottom: mobile-vw(#{$val} !important);
+//   }
+//   .mlm-#{$key}{
+//     margin-left: mobile-vw(#{$val} !important);
+//   }
+//   .mxm-#{$key}{
+//     margin-right: mobile-vw(#{$val} !important);
+//     margin-left: mobile-vw(#{$val} !important);
+//   }
+//   .mym-#{$key}{
+//     margin-top: mobile-vw(#{$val} !important);
+//     margin-bottom: mobile-vw(#{$val} !important);
+//   }
+// }

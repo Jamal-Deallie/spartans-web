@@ -1,0 +1,29 @@
+@use 'sass:color';
+@use '@/styles/abstracts/_index' as *;
+
+$colors: (
+  'primary': rgb(245, 75, 27),
+  'secondary': rgb(13, 13, 13),
+  'tertiary': rgb(248, 249, 252),
+  'gradient': (
+    #f94d24,
+    #f6531d,
+    #f35816,
+    #f05d0c,
+    #ed6200,
+  ),
+);
+
+@each $name, $color in $colors {
+  .#{$name}-clr {
+    color: #{$color};
+  }
+  .#{$name}-bg {
+    background-color: #{$color};
+  }
+}
+:root {
+  @each $name, $color in $colors {
+    --#{$name}-variant: #{$color};
+  }
+}

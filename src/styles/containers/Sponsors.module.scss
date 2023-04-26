@@ -1,0 +1,106 @@
+@use '@/styles/abstracts/_index' as *;
+@use '@/styles/base/_media' as *;
+.sponsors {
+  margin-top: mobile-vw(96px);
+
+  @include desktop {
+    margin-top: desktop-vw(96px);
+  }
+}
+
+.title-wrap {
+  margin-bottom: mobile-vw(96px);
+  h1:nth-of-type(odd) {
+    color: var(--primary-variant);
+    background-image: linear-gradient(
+      to right top,
+      #f94d24,
+      #f6531d,
+      #f35816,
+      #f05d0c,
+      #ed6200
+    );
+    background-image: -webkit-linear-gradient(
+      to right top,
+      #f94d24,
+      #f6531d,
+      #f35816,
+      #f05d0c,
+      #ed6200
+    );
+
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+  @include desktop {
+    margin-bottom: desktop-vw(96px);
+  }
+}
+
+.text-marquee {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.text-single {
+  position: relative;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  will-change: transform;
+
+  span {
+    font-family: var(--heading-font), sans-serif;
+    line-height: 86%;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-style: normal;
+    font-size: mobile-vw(32px);
+  }
+
+  span:nth-of-type(even) {
+    color: var(--primary-variant);
+    background-image: linear-gradient(
+      to right top,
+      #f94d24,
+      #f6531d,
+      #f35816,
+      #f05d0c,
+      #ed6200
+    );
+    background-image: -webkit-linear-gradient(
+      to right top,
+      #f94d24,
+      #f6531d,
+      #f35816,
+      #f05d0c,
+      #ed6200
+    );
+
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  @include desktop {
+    span {
+      font-size: desktop-vw(96px);
+    }
+  }
+}
+
+.text {
+  padding: 0;
+  font-size: 6.4rem;
+  display: inline-block;
+  margin-right: 2rem;
+  font-family: arial;
+  font-weight: bold;
+}

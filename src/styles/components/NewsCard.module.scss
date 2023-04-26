@@ -1,0 +1,105 @@
+@use '@/styles/abstracts/_index' as *;
+@use '@/styles/base/_media' as *;
+
+.item {
+  display: flex;
+  border-radius: 25px;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: mobile-vw(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: hsla(0, 100%, 100%, 0.05);
+  box-shadow: 0px 1px 1px 0px hsla(0, 0%, 0%, 0.14),
+    0px 2px 1px -1px hsla(0, 0%, 0%, 0.12), 0px 1px 3px 0px hsla(0, 0%, 0%, 0.2);
+  padding: mobile-vw(12px);
+
+  &:not(:first-child) {
+    margin-top: 64px;
+  }
+  h5 {
+    font-size: mobile-vw(30.04px);
+    @include mobile {
+      margin: mobile-vw(12px) 0;
+    }
+    @include desktop {
+      margin-top: desktop-vw(16px);
+      font-size: desktop-vw(67.77px);
+    }
+  }
+  
+  p {
+    @include desktop {
+      margin-top: desktop-vw(16px);
+    }
+    @include ellipsis(3);
+  }
+
+  @include desktop {
+    flex-direction: row;
+    gap: desktop-vw(64px);
+    height: 100%;
+    padding: desktop-vw(24px);
+  }
+}
+
+.img-wrap {
+  position: relative;
+  aspect-ratio: 360 / 224;
+  width: 100%;
+  height: mobile-vw(300px);
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-inline: auto;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 15%;
+    border-radius: 12.5px;
+  }
+
+  @include desktop {
+    width: desktop-vw(480px);
+    height: desktop-vw(360px);
+    overflow: hidden;
+  }
+}
+
+.desc-inner {
+  @include desktop {
+    padding-top: desktop-vw(40px);
+  }
+}
+
+.btn-cont {
+  margin-top: mobile-vw(8px);
+  @include desktop {
+    margin-top: desktop-vw(24px);
+    width: desktop-vw(248px);
+  }
+  .btn-inner {
+    display: flex;
+    align-items: center;
+
+    span {
+      line-height: 1.5;
+    }
+    @include desktop {
+      gap: desktop-vw(12px);
+      .icon {
+        display: flex;
+        align-items: center;
+        aspect-ratio: 1;
+        width: desktop-vw(24px);
+        height: auto;
+        svg {
+          aspect-ratio: 1;
+          width: 100%;
+          height: 100%;
+        }
+        stroke: var(--tertiary-variant);
+      }
+    }
+  }
+}

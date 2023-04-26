@@ -1,0 +1,53 @@
+@use '@/styles/abstracts/_index' as *;
+@use '@/styles/base/_media' as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  textarea {
+    height: 205px;
+    resize: none;
+    border: 1.75px solid rgba(255, 255, 255, 0.7);
+
+    width: 100%;
+    color: var(--tertiary-variant);
+    padding-top: 16px;
+    padding-inline: 16px;
+  }
+
+  textarea::placeholder {
+    color: var(--tertiary-variant);
+  }
+}
+
+.btn {
+  /* Font & Text */
+  font-size: 16px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 24px;
+  text-decoration: none solid rgb(0, 0, 0);
+
+  vertical-align: baseline;
+  white-space: nowrap;
+
+  /* Box */
+  height: 48px;
+  width: 100%;
+
+  padding: 12px 20px;
+  max-height: none;
+  min-height: 0px;
+  max-width: none;
+  min-width: 0px;
+
+  display: inline-flex;
+  justify-content: center;
+
+  cursor: pointer;
+
+  border-radius: 9999px;
+}

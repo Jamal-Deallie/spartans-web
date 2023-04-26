@@ -1,0 +1,19 @@
+@use '@/styles/abstracts/_index' as *;
+@use '@/styles/base/_media' as *;
+
+
+.faqs {
+    margin-top: mobile-vw(96px);
+    overflow: hidden;
+    @include desktop {
+      margin-top: desktop-vw(128px);
+    }
+  }
+  
+.accordion-cont {
+  margin-top: mobile-vw(48px);
+
+  @include desktop {
+    margin-top: desktop-vw(96px);
+  }
+}

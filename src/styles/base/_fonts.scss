@@ -1,0 +1,12 @@
+@use '@/styles/abstracts/_index' as *;
+
+$fonts: (
+  'body': nimbus-sans,
+  'heading': alternate-gothic-compressed,
+);
+
+:root {
+  @each $name, $font in $fonts {
+    --#{$name}-font: #{$font};
+  }
+}

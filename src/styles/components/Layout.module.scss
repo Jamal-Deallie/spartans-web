@@ -1,0 +1,23 @@
+@use '@/styles/abstracts/_index' as *;
+@use '@/styles/base/_media' as *;
+
+.layout {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: var(--secondary-variant);
+  @include mobile {
+    overflow: hidden;
+  }
+  .main-wrap {
+    margin-top: var(--nav-height);
+    flex-grow: 1;
+    min-height: calc(100vh - var(--nav-height));
+
+    @include desktop {
+      margin-top: var(--nav-height);
+      min-height: calc(100vh - var(--nav-height));
+    }
+  }
+}

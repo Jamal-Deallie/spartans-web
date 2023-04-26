@@ -1,0 +1,26 @@
+@use '@/styles/abstracts/_index' as *;
+@use '@/styles/base/_media' as *;
+
+.contact-cont {
+  margin-top: mobile-vw(96px);
+
+  @include desktop {
+    margin-top: desktop-vw(128px);
+  }
+}
+.title-cont {
+  grid-column: 1 / -1;
+}
+
+.desc {
+  grid-column: 1 / 5;
+}
+
+.form-wrap {
+  margin-top: mobile-vw(96px);
+  grid-column: 1 / -1;
+  @include desktop {
+    grid-column: 6 / -1;
+    margin-top: desktop-vw(128px);
+  }
+}

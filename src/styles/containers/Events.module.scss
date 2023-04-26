@@ -1,0 +1,31 @@
+@use '@/styles/abstracts/_index' as *;
+@use '@/styles/base/_media' as *;
+
+.events {
+  position: relative;
+  margin-top: mobile-vw(48px);
+  // overflow: hidden;
+  @include desktop {
+    margin-top: desktop-vw(128px);
+  }
+}
+
+.card-cont {
+  margin-top: mobile-vw(48px);
+  // overflow: hidden;
+  @include desktop {
+    margin-top: desktop-vw(96px);
+  }
+}
+
+.btn-wrap {
+  display: flex;
+  justify-content: center;
+  margin-inline: auto;
+  margin-top: mobile-vw(16px);
+  
+  @include desktop {
+    margin-top: desktop-vw(24px);
+    height: desktop-vw(48px);
+  }
+}

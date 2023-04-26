@@ -1,0 +1,78 @@
+@use '@/styles/abstracts/_index' as *;
+@use '@/styles/base/_media' as *;
+
+.btn-wrap {
+  @include desktop {
+    visibility: visible;
+    color: var(--primary-variant);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1.75px solid var(--primary-variant);
+    border-radius: 9999px;
+    transition: color 150ms, border 150ms, background-image 150ms;
+    min-height: desktop-vw(48px);
+    &:hover {
+      border: 1.75px solid var(--tertiary-variant);
+      color: var(--tertiary-variant);
+      background-image: var(--bg-gradient);
+    }
+  }
+}
+.heading {
+  p {
+    line-height: 1;
+    margin-top: mobile-vw(24px);
+  }
+
+  @include desktop {
+    p {
+      margin-top: desktop-vw(32px);
+    }
+  }
+}
+.form-cont {
+  h5 {
+    font-size: mobile-vw(16px);
+  }
+  form {
+    width: 100%;
+  }
+
+  @include desktop {
+    margin-top: desktop-vw(32px);
+
+    h5 {
+      font-size: desktop-vw(41.89px);
+    }
+  }
+}
+
+.buttons {
+  margin-top: 24px;
+  display: inline-flex;
+
+  gap: 24px;
+  button {
+    border: 1px solid var(--secondary-variant);
+    padding: 20px;
+    color: var(--secondary-variant);
+  }
+}
+
+.fields {
+  display: flex;
+  align-items: flex-end;
+  margin: 24px 0;
+  gap: 16px;
+  color: var(--secondary-variant);
+  input {
+    border-bottom: 1px solid var(--secondary-variant);
+    height: 19px;
+    padding-left: 4px;
+    color: var(--secondary-variant);
+    &::placeholder {
+      color: var(--secondary-variant);
+    }
+  }
+}

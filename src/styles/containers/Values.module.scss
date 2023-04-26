@@ -1,0 +1,14 @@
+@use '@/styles/abstracts/_index' as *;
+@use '@/styles/base/_media' as *;
+
+.values-cont {
+  margin-top: mobile-vw(96px);
+  overflow: hidden;
+  @include desktop {
+    margin-top: desktop-vw(128px);
+  }
+}
+
+.slider-cont{
+  overflow: hidden;
+}
