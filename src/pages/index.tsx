@@ -1,5 +1,4 @@
 import dynamic from 'next/dynamic';
-import Layout from '@/components/Layout';
 import FullSlider from '@/components/FullSlider';
 import Faqs from '@/containers/Faqs';
 import CTA from '@/containers/CTA';
@@ -11,7 +10,6 @@ import Leadership from '@/containers/Leadership';
 import FadeIn from '@/animations/FadeIn';
 import Slider from '@/containers/Values';
 import { Button } from '@/components/Button';
-import Image from 'next/image';
 import cn from 'classnames';
 import styles from '@/styles/pages/Home.module.scss';
 
@@ -54,14 +52,6 @@ export default function home({}: Props) {
         </div>
         <Intro />
         <FadeIn>
-          {/* <div className={cn(styles['img-cont'], 'main-cont fadeIn')}>
-            <Image
-              fill
-              alt='The Spartan Football Team'
-              src={'/img/intro.webp'}
-              sizes='(max-width: 738px) 100vw'
-            />
-          </div> */}
           <FullSlider />
         </FadeIn>
 
@@ -71,7 +61,7 @@ export default function home({}: Props) {
         </FadeIn>
 
         <Slider />
-        <Faqs />
+ 
         <FadeIn>
           <Gear />
         </FadeIn>

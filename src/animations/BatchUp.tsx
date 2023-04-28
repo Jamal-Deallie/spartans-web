@@ -18,7 +18,7 @@ export default function BatchUp({ children, start }: AnimationProps) {
 
     mm.add('(min-width: 800px)', () => {
       let q = gsap.utils.selector(root.current);
-      let targets: any[] = gsap.utils.toArray(q('.batch-item'));
+      let targets: any[] = gsap.utils.toArray(q('.batch-up'));
 
       tl.current = gsap.timeline({
         scrollTrigger: {

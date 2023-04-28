@@ -31,7 +31,7 @@ export default function Leadership({}: Props) {
           <aside className={styles['img-wrap']}>
             <Image
               fill
-              src='/img/coach.webp'
+              src='https://res.cloudinary.com/dtwk4dm3g/image/upload/v1682485146/spartans/coach_o7kbw4.webp'
               sizes='(max-width: 850px) 100vw'
               alt='Spartans Coach'
             />

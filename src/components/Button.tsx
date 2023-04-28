@@ -19,6 +19,7 @@ type BaseProps = {
   src?: string;
   bgc?: string;
   fc?: string;
+
   onClick?: () => void;
 };
 
@@ -34,6 +35,7 @@ type ButtonAsUnstyled = Omit<ButtonAsButton, 'as'> & {
 type ButtonAsLink = BaseProps &
   Omit<LinkProps, keyof BaseProps> & {
     as: 'link';
+    href?: string;
   };
 
 type ButtonAsExternal = BaseProps &
@@ -48,8 +50,7 @@ type Props =
   | ButtonAsUnstyled;
 
 const ButtonComponent = (props: Props) => {
-
-  const { as, bgc, fc, size, font, children, disabled } = props;
+  const { as, bgc, fc, size, font, children, disabled} = props;
 
   const classNames = cn(
     styles['base'],
@@ -62,7 +63,7 @@ const ButtonComponent = (props: Props) => {
   if (as === 'link') {
     const { ...rest } = props;
     return (
-      <Link {...rest} className={classNames}>
+      <Link {...rest} href={props.href} className={classNames}>
         {children}
       </Link>
     );

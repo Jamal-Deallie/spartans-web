@@ -8,10 +8,10 @@ export default function Faqs({}: Props) {
   return (
     <section className={styles['faqs']}>
       <div className='main-cont'>
-        <div className='grid-1'>
+        <div className='title-wrap'>
           <FadeUp>
             <span className='subtitle fadeUp'>FAQs</span>
-            <h1 className='title-md txt-gradient fadeUp'>Common</h1>
+            <h1 className='title-md fadeUp'>Common</h1>
             <h1 className='title-md fadeUp'>Questions</h1>
           </FadeUp>
         </div>

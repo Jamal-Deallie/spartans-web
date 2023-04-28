@@ -81,21 +81,21 @@ export default function Staff({}: Props) {
   return (
     <section className='main-cont' ref={root}>
       <div className={styles['staff']}>
-        <div className={styles['title-cont']}>
-          <div className={styles.title}>
-            <h1 className='title-md txt-gradient'>The Spartan Family</h1>
+          <div className='title-wrap'>
+            <h1 className='title-md'>The Spartan</h1>
+            <h1 className='title-md'>Family</h1>
           </div>
-        </div>
+   
 
         <div className={styles['btn']}>
           <div className={styles['btn-inner']}>
-            <Button bgc={'secondary'} size={'lrg'} onClick={toggleCoach}>
+            <Button bgc={'gradient'} size={'md'} onClick={toggleCoach}>
               Coaches
             </Button>
-            <Button bgc={'secondary'} size={'lrg'} onClick={toggleStaff}>
+            <Button bgc={'gradient'} size={'md'} onClick={toggleStaff}>
               Staff
             </Button>
-            <Button bgc={'secondary'} size={'lrg'}>
+            <Button bgc={'gradient'} size={'md'}>
               Players
             </Button>
           </div>

@@ -36,7 +36,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  width: 100%;
+  width: mobile-vw($mobile-width);
   height: 100vh;
   position: absolute;
   z-index: 9;
@@ -45,15 +45,13 @@
   ul {
     padding: 2rem 0 0 2rem;
     margin-top: mobile-vw(96px);
-    @include desktop {
-      margin-top: desktop-vw(128px);
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 2rem;
-    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: mobile-vw(24px);
+
     li {
       a {
         font-size: mobile-vw(45px);
@@ -64,9 +62,6 @@
         letter-spacing: -0.02em;
         text-transform: uppercase;
         line-height: 86%;
-        @include desktop {
-          font-size: desktop-vw(90px);
-        }
       }
       a:hover {
         color: var(--secondary-variant);

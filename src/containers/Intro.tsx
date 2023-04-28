@@ -11,24 +11,15 @@ export default function Intro({}: Props) {
   return (
     <section className={styles['intro']}>
       <div className='grid-inner'>
-        <div className={cn(styles['title-cont'], 'secondary-bg')}>
-          <div className={styles['title-wrap']}>
+        <div className={styles['title-cont']}>
+          <div className='title-wrap'>
             <FadeUp>
               <p className='subtitle fadeUp'>Who We Are</p>
-              <h1 className='title-md clr-prim fadeUp'>Building</h1>
+              <h1 className='title-md fadeUp'>Building</h1>
               <h1 className='title-md fadeUp'>Strong</h1>
-              <h1 className='title-md clr-prim fadeUp'>Foundations</h1>
+              <h1 className='title-md fadeUp'>Foundations</h1>
             </FadeUp>
           </div>
-          {/* <div className={styles['svg-wrap']}>
-            <Image
-              src={'img/route-1.svg'}
-              alt='cloud'
-              fill
-              sizes='(max-width: 768px) 100vw)'
-              priority
-            />
-          </div> */}
         </div>
 
         <aside className={styles['cat-cont']}>

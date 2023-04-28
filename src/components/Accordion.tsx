@@ -49,7 +49,7 @@ const Accordion = ({ questions, answers }: AccordionProps) => {
   }, [tl, toggle]);
 
   return (
-    <div className={cn(styles['faq'], 'batch-item')} ref={root}>
+    <div className={cn(styles['faq'], 'batch-up')} ref={root}>
       <button className={styles['question']} onClick={handleToggle}>
         <span className='txt'>Reducio portus avada?</span>
         <div ref={icon}>

@@ -76,8 +76,8 @@ export default function About({}: Props) {
           <div className={cn(styles['img-inner'], 'fadeIn')}>
             <div className={styles['img-wrap']}>
               <Image
-                src={'/img/about.webp'}
-                alt='Cheerleading'
+                src={'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1682655408/spartans/about_jvylzj.webp'}
+                alt='Spartans Football Team'
                 fill
                 sizes='100vw'
               />

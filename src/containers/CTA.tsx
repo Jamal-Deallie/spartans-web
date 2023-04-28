@@ -1,4 +1,5 @@
 import { useState, SyntheticEvent } from 'react';
+import { Button } from '@/components/Button';
 import styles from '@/styles/containers/CTA.module.scss';
 import cn from 'classnames';
 type Props = {};
@@ -25,23 +26,9 @@ export default function CTA({}: Props) {
           </p>
         </div>
         <div className={styles.button} id='btn'>
-          {/* <Button href='signup' as='link' bgc='gradient' size='md'>
-                  Sign Up
-                </Button> */}
-          <a className={cn(styles['btn'], 'secondary-bg')}>
+          <Button href='/signup' as='link' bgc='secondary' size='lrg'>
             Sign Up Now
-            <svg
-              viewBox='0 0 24 24'
-              fill='none'
-              xmlns='http://www.w3.org/2000/svg'>
-              <path
-                d='M20 12H4m16 0-6 6m6-6-6-6'
-                strokeWidth={1.5}
-                strokeLinecap='round'
-                strokeLinejoin='round'
-              />
-            </svg>
-          </a>
+          </Button>
         </div>
       </div>
     </section>

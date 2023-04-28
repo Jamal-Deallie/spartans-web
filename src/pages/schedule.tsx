@@ -1,24 +1,20 @@
 import { useState } from 'react';
-import MatchUpCard from '@/components/MatchCard';
-import Layout from '@/components/Layout';
-import { scheduleItems } from '@/data/data';
+import CalendarCard from '@/components/CalendarCard';
+import { Button } from '@/components/Button';
 import cn from 'classnames';
 import styles from '@/styles/pages/Schedule.module.scss';
 type Props = {};
 
 export default function Schedule({}: Props) {
-  const [regSeason, setRegSeason] = useState(true);
-
   return (
     <section className={cn(styles['schedule'])}>
-      <div className={'main-cont'} id='outer'>
-        <div className={styles['title-primary']}>
-          <div className={styles.title}>
-            <h1 className='title'>2023</h1>
-            <h1 className='title txt-gradient'>Spartans</h1>
-            <h1 className='title'>Schedule</h1>
-          </div>
+      <div className='main-cont'>
+        <div className='title-wrap'>
+          <h1 className='title-md'>2023</h1>
+          <h1 className='title-md'>Spartans</h1>
+          <h1 className='title-md'>Events</h1>
         </div>
+
         <div className={styles['desc-cont']}>
           <p>
             Merrimack Valley Spartans has an exciting schedule lined up for the
@@ -26,30 +22,24 @@ export default function Schedule({}: Props) {
             games against local teams in the region.
           </p>
         </div>
-        <div className={styles['btn-cont']}>
-          <button className={regSeason ? 'gradient-bg' : 'secondary-bg'}>
-            Regular Season
-          </button>
-          <button className={regSeason ? 'secondary-bg' : 'gradient-bg'}>
-            Postseason
-          </button>
+        <div className={styles['btn']}>
+          <div className={styles['btn-inner']}>
+            <Button bgc={'gradient'} size={'md'}>
+              Meetings
+            </Button>
+            <Button bgc={'gradient'} size={'md'}>
+              Practice
+            </Button>
+            <Button bgc={'gradient'} size={'md'}>
+              Gameday
+            </Button>
+          </div>
         </div>
-        {scheduleItems.map(item => {
-          return (
-            <MatchUpCard
-              // opponent={opponent}
-              // score={score}
-              // address={address}
-              // stadium={stadium}
-              // date={date}
-              // week={week}
-              // home={home}
-              // op
-              {...item}
-              key={item.id}
-            />
-          );
-        })}
+        <div className={styles['card-cont']}>
+          <CalendarCard />
+          <CalendarCard />
+          <CalendarCard />
+        </div>
       </div>
     </section>
   );

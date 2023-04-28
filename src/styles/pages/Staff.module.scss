@@ -14,14 +14,16 @@
 
   .btn-inner {
     display: flex;
-    gap: mobile-vw(32px);
+    gap: mobile-vw(16px);
     border-bottom: 1.75px solid;
+    padding-bottom: mobile-vw(16px);
   }
 
   @include desktop {
     margin-top: desktop-vw(96px);
 
     .btn-inner {
+      flex-direction: row;
       gap: desktop-vw(32px);
       padding-bottom: desktop-vw(24px);
     }

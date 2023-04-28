@@ -19,10 +19,11 @@
     top: desktop-vw(220px);
     align-self: start;
     border-left: 4px solid var(--theme-contrast);
-    grid-column: 1 / span 6;
+    grid-column: 1 / span 7;
     padding: desktop-vw(24px) 0;
   }
 }
+
 .title-wrap {
   position: relative;
   z-index: 2;
@@ -30,6 +31,7 @@
     height: fit-content;
   }
 }
+
 .svg-wrap {
   position: relative;
   aspect-ratio: 696.24 / 505.708;

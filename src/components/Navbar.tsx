@@ -18,7 +18,7 @@ export default function Navbar() {
         <Link href='/' className={styles['logo']}>
           <div className={styles['logo']}>
             <Image
-              src={'/img/logo.png'}
+              src={'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1682485143/spartans/logo_vcctui.png'}
               alt={'Spartans Logo'}
               fill
               sizes='(max-width: 850px) 100vw'

@@ -4,7 +4,7 @@ type Props = {};
 
 export default function CalendarCard({}: Props) {
   return (
-    <div className={cn(styles['card'], 'secondary-bg')}>
+    <div className={cn(styles['card'], 'secondary-bg batch-up')}>
       <div className={cn(styles['date'], 'gradient-bg')}>
         <div className={styles['day']}>
           <span>01</span>
